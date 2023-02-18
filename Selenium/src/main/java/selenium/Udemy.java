@@ -80,6 +80,7 @@ public class Udemy {
         Xpath //input[@placeholder='Username']
         Xpath sintax Tagname[contains(@attribute,'partialValue')] -> //button[contains(@class,'submit')] -> se foloseste contains pentru a cauta dupa un cuvant partial
         Xpath sintax //Tagname
+        Xpath sintax ->"//button[text()='Log Out']"-> pentru a-l selecta pe baza textului, la css nu merge
         
         Xpath sintaxa cautare in consola
         Xpath $x('//input[@placeholder="Username"]') - trebuie sa punem "" la stringuri, nu lasam cu '' 
