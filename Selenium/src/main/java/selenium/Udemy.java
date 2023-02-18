@@ -85,7 +85,10 @@ public class Udemy {
         Xpath sintaxa cautare in consola
         Xpath $x('//input[@placeholder="Username"]') - trebuie sa punem "" la stringuri, nu lasam cu '' 
         
-        Xpath sintax //parentTagname/childTagname -> inca o moadalitate pentru a-l scrie folosind parent-child relationship*/
+        Xpath sintax //parentTagname/childTagname -> inca o moadalitate pentru a-l scrie folosind parent-child relationship
+        Xpath - RELATIVE XPATH - se scrie cu // si se face unde vrei tu sa cauti
+        Xpath - ABSOLUTE XPATH - se scrie cu / si trebuie sa incepi de la inceputul paginii gen /html/...
+        */
         Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Mihai"); //daca voiam sa il scriem in CSS era: (input[placeholder='Name'])
         driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("Mihai@");
