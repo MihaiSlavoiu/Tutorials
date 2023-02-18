@@ -1,4 +1,4 @@
-package Udemy;//https://endavace1.udemy.com/course/selenium-real-time-examplesinterview-questions/learn/lecture/29096062#notes clip 43
+package selenium;//https://endavace1.udemy.com/course/selenium-real-time-examplesinterview-questions/learn/lecture/29096062#notes clip 43
 import java.time.Duration;
 
 import org.openqa.selenium.By;
