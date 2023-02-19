@@ -19,11 +19,13 @@ public class UdemyStore {
         List<WebElement> productsName = driver.findElements(By.cssSelector("h4.product-name"));
         for (int i = 0; i < productsName.size(); i++) {
             String name = productsName.get(i).getText();
-            if (name.contains("Cucumber")) {
+            if (name.contains("Carrot")) {
                 driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
                 break;
             }
         }
+
+        //PENTRU MAI MULTE PRODUSE
 
         String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot"};
         addItems(driver, itemsNeeded);
