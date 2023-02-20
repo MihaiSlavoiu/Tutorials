@@ -4,14 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.NoSuchElementException;
+import java.util.function.Function;
 
 //IMPLICIT WAIT - globaly - Wait 3 seconds befor you throw exception/nu astepta sa treaca tot daca gaseste rezultatul(nu e ok daca trebuie sa returneze multe rezultate)
 //IMPLICIT WAIT sintax - driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -23,11 +22,11 @@ import java.util.concurrent.TimeUnit;
 //THRES.SLEEP - face parte din java nu selenium, cat ii dai sa asteapta atat sta, nu face mai devreme
 //FLUENT WAIT
 
-public class SynchronizationsWaits {
+public class Udemy8SynchronizationsWaits {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // IMPLICIT WAIT
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
@@ -45,6 +44,28 @@ public class SynchronizationsWaits {
         //wait.until(ExpectedConditions.elementToBeClickable()) - exemplu
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".promoInfo")));
         System.out.println(driver.findElement(By.cssSelector(".promoInfo")).getText());
+
+        //FLUENT WAIT
+        WebDriver driver1 = new ChromeDriver();
+        driver1.manage().window().maximize();
+        driver1.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        driver1.findElement(By.cssSelector("div[id='start'] button")).click();
+
+        Wait<WebDriver> wait1 = new FluentWait<WebDriver>(driver1).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(3)).ignoring(NoSuchElementException.class);//ultima parte e optional
+
+        WebElement foo = wait1.until(new Function<WebDriver, WebElement>() {
+
+            public WebElement apply(WebDriver driver1) {
+                if (driver1.findElement(By.cssSelector("div[id='finish'] h4")).isDisplayed()) {
+                    return driver1.findElement(By.cssSelector("div[id='finish'] h4"));
+                }else{
+                    return null;
+                }
+            }
+
+            });
+        System.out.println(driver1.findElement(By.cssSelector("div[id='finish'] h4")).getText());
+
     }
 
     public static void addItems(WebDriver driver, String[] itemsNeeded) {

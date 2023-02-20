@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class UdemyAlerts {
+public class Udemy5Alerts {
     public static void main(String[] args) throws InterruptedException {
         String text = "Mihai";
         WebDriver driver = new ChromeDriver();

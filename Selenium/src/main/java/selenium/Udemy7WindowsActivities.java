@@ -3,7 +3,7 @@ package selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class UdemyWindowsActivities {
+public class Udemy7WindowsActivities {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); //maximizeaza pagina
