@@ -28,6 +28,7 @@ public class UdemyStore {
         //PENTRU MAI MULTE PRODUSE
 
         String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot"};
+//        List<String> itemsNeeded2 = Arrays.asList("Cucumber", "Brocolli", "Beetroot");
         addItems(driver, itemsNeeded);
 
         //PENTRU MAI MULTE PRODUSE
