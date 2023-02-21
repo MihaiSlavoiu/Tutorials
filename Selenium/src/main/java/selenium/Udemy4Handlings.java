@@ -66,5 +66,7 @@ public class Udemy4Handlings {
         //count the number of checkboxes
         System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 
+        driver.manage().deleteAllCookies(); // ca sa stergi toate cookieurile
+        driver.manage().deleteCookieNamed("nume cookie"); //ca sa stergi doar un anumit cookie
     }
 }
