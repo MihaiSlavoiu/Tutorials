@@ -1,0 +1,18 @@
+<suite name="Loan Department">
+
+    <test name="Regression">
+        <groups>
+            <run>
+                <exclude name ="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.test.day1"/>
+            <class name="org.example.test.day2"/>
+            <class name ="org.example.test.day4"/>
+            <class name="org.example.test.day3"/>
+
+        </classes>
+    </test>
+
+</suite>
