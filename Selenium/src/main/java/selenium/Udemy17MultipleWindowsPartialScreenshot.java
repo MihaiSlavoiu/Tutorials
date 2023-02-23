@@ -21,6 +21,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 
 public class Udemy17MultipleWindowsPartialScreenshot {
@@ -72,6 +73,11 @@ public class Udemy17MultipleWindowsPartialScreenshot {
         System.out.println(name.getRect().getDimension().getHeight());
 
         System.out.println(name.getRect().getDimension().getWidth());
+
+
+    }
+    @Test
+    public void aa() {
 
     }
 }

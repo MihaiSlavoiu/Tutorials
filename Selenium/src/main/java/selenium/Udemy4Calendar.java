@@ -6,8 +6,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Udemy4Calendar {
@@ -35,19 +37,25 @@ public class Udemy4Calendar {
 
         WebDriver driver1 = new ChromeDriver();
         driver1.manage().window().maximize();
+        driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver1.get("https://www.path2usa.com/travel-companions");
         JavascriptExecutor js = (JavascriptExecutor) driver1;
         js.executeScript("window.scrollBy(0,1200)");
 
         Thread.sleep(2000);
 //April 21
+
         driver1.findElement(By.id("form-field-travel_comp_date")).click();
 
-
-        while (!driver1.findElement(By.className("cur-month")).getText().contains("April")) {
+        do{
             driver1.findElement(By.className("flatpickr-next-month")).click();
-        }
 
+        }while(!driver1.findElement(By.className("cur-month")).getText().contains("March"));
+
+//        while (!driver1.findElement(By.className("cur-month")).getText().contains("April")) {
+//            Thread.sleep(1000);
+//            driver1.findElement(By.className("flatpickr-next-month")).click();
+//        }
 
         List<WebElement> dates = driver1.findElements(By.cssSelector(".flatpickr-day"));
 //Grab common attribute//Put into list and iterate
