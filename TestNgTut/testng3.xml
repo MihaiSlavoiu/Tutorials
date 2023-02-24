@@ -1,9 +1,10 @@
+<!--//TEST SUITE ->TEST FOLDER -> TEST CASES-->
 <suite name="Loan Department">
 
     <test name="Regression">
         <groups>
             <run>
-                <exclude name ="Smoke"/>
+                <exclude name ="Smoke"/> <!--executa doar teste care au definit ca group "Smoke" - daca de ex vrei sa execude toate in afara de cele cu smoke scrii <exclude name = "Smoke"/>-->
             </run>
         </groups>
         <classes>

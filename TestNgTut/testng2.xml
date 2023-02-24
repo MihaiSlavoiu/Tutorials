@@ -2,7 +2,7 @@
 
     <test name="Personal loan">
         <packages>
-            <package name= "org.example.test"/>
+            <package name= "org.example.test"/> <!--daca vrei sa execute doar un singur pachet-->
         </packages>
     </test>
 </suite>

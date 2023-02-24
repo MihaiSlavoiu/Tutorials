@@ -1,34 +1,35 @@
-<suite name="Loan Department" parallel="tests" thread-count="6">
-    <listeners>
-        <listener class-name="org.example.Listeners"/>
-    </listeners>
+<suite name="Loan Department" parallel="tests" thread-count="6"> <!--poti sa i pui ce nume vrei, A suite is represented by one XML file. It can contain one or more tests and is defined by the <suite> tag-->
+                                                                 <!--//parralel="tests" thread-count=6 executa 6 teste in parralel-->
+<listeners> <!---->
+<listener class-name="org.example.Listeners"/>
+</listeners>
 
-    <test name="Personal loan">
-        <parameter name="URL" value="personalloan.com"/>
+<test name="Personal loan"> <!--A test is represented by <test> and can contain one or more TestNG classes. (astea sunt folderele de testare)//parralel = "classes" thread-count="2" executa in paralel 2 clase-->
+<parameter name="URL" value="personalloan.com"/> <!-- acesti parametri sunt globali, daca stii ca iti trebuie in multe locuri ii scrii aici, se plaica la toate testcaseurile din pachet, gen aici se scriu url generale-->
+                                                <!--acesti parametri sunt aplicabili doar folderului acesta, daca stii ca iti trebuie in multe locuri ii scrii aici, se plaica la toate testcaseurile din pachet, aici se scriu url urile in care lucrezi-->
+<classes> <!--A TestNG class is a Java class that contains at least one TestNG annotation. It is represented by the <class> tag and can contain one or more test methods.-->
+<class name="org.example.test.day1">
+<methods>
+<include name ="Demo"/><!--include individual methods within class - se foloseste cand vrei sa testezi doar metoda respectiva, de ex daca ai 100 teste, si vrei s arulezidoar 2 se fol include-->
+</methods>
 
-        <classes>
-            <class name="org.example.test.day1">
-                <methods>
-                    <include name ="Demo"/>
-                </methods>
 
+</class>
+<class name="org.example.test.day2"/>
+<class name ="org.example.test.day4"/>
 
-            </class>
-            <class name="org.example.test.day2"/>
-            <class name ="org.example.test.day4"/>
+</classes>
+</test>
+<test name ="Car Loan">
+<parameter name="URL" value="carloan.com"/>
+<parameter name="APIKey/usrname" value="123456"/>
+<classes>
 
-        </classes>
-    </test>
-    <test name ="Car Loan">
-        <parameter name="URL" value="carloan.com"/>
-        <parameter name="APIKey/usrname" value="123456"/>
-        <classes>
-
-            <class name="org.example.test.day3">
-                <methods>
-                    <exclude name="API.*"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<class name="org.example.test.day3">
+<methods>
+<exclude name="API.*"/> <!--exclude individual methods within class (.* se aplica la toate metodele care incep cu "api")-->
+</methods>
+</class>
+</classes>
+</test>
 </suite>
