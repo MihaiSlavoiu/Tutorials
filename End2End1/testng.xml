@@ -1,0 +1,17 @@
+<suite name="Suite">
+    <test name="Submit Order Test">
+        <classes>
+            <class name="org.example.StandAloneTestPageObjects"/>
+        </classes>
+    </test>
+    <test name="Error Validation Test">
+        <classes>
+            <class name="org.example.ErrorValidations"/>
+                    </classes>
+    </test>
+    <test name="Stand Alone Test">
+        <classes>
+            <class name="org.example.StandAloneTest"/>
+        </classes>
+    </test>
+</suite>

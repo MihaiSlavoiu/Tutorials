@@ -14,9 +14,22 @@ import java.util.List;
 public class ErrorValidations extends BaseTests {
 
     @Test
-    public void submitOrder() throws IOException, InterruptedException {
+    public void LoginErrorValidation() throws IOException, InterruptedException {
         String productName = "ZARA COAT 3";
         ProductCatalog productCatalog = landingPage.loginApplication("aaa@aaa.com", "Pass123a456");
         Assert.assertEquals("Incorrect email or password.",landingPage.getErrorMessage());
+    }
+
+    @Test
+    public void ProductErrorValidation() throws IOException, InterruptedException {
+        String productName = "ZARA COAT 3";
+        ProductCatalog productCatalog = landingPage.loginApplication("aaa@aaa.com", "Pass123456");
+        List<WebElement> products = productCatalog.getProductList();
+        productCatalog.addProductToCart(productName);
+
+        CartPage cartPage = productCatalog.goToCartPage();
+        Boolean match = cartPage.verifyProductDisplay("ZARA COAT 33");
+        Assert.assertFalse(match);
+
     }
 }
