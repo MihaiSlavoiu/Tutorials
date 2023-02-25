@@ -1,4 +1,5 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+package org.example;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
+
 //aaa@aaa.com Pass123456
 //clasa 1 - StandAloneTest - in package test
 //aici e un test complet end 2 end
