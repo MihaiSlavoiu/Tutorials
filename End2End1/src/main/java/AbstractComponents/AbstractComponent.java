@@ -1,6 +1,7 @@
 package AbstractComponents;
 
 import org.example.CartPage;
+import org.example.OrderPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,4 +50,15 @@ public class AbstractComponent {
         CartPage cartPage = new CartPage(driver);
         return cartPage;
     }
+
+    //[routerlink="/dashboard/myorders"]
+    @FindBy(css="[routerlink='/dashboard/myorders']")
+    WebElement orderHeader;
+
+    public OrderPage goToOrdersPage(){
+        orderHeader.click();
+        OrderPage orderPage = new OrderPage(driver);
+        return orderPage;
+    }
+
 }

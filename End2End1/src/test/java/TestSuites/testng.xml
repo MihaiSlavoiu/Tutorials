@@ -1,12 +1,12 @@
-<suite name="Suite">
+<suite parallel = "tests" name="Suite">
     <test name="Submit Order Test">
         <classes>
-            <class name="org.example.StandAloneTestPageObjects"/>
+            <class name="org.example.SubmitOrderTest"/>
         </classes>
     </test>
     <test name="Error Validation Test">
         <classes>
-            <class name="org.example.ErrorValidations"/>
+            <class name="org.example.ErrorValidationsTest"/>
                     </classes>
     </test>
     <test name="Stand Alone Test">

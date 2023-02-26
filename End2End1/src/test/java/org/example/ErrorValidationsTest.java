@@ -11,9 +11,9 @@ import java.util.List;
 //aaa@aaa.com Pass123456
 //clasa 1 - StandAloneTest - in package test
 //aici e un test complet end 2 end
-public class ErrorValidations extends BaseTests {
+public class ErrorValidationsTest extends BaseTests {
 
-    @Test
+    @Test(groups = {"ErrorHandling"})
     public void LoginErrorValidation() throws IOException, InterruptedException {
         String productName = "ZARA COAT 3";
         ProductCatalog productCatalog = landingPage.loginApplication("aaa@aaa.com", "Pass123a456");

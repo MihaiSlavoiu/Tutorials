@@ -1,0 +1,19 @@
+<suite parallel="tests" name="Suite">
+    <groups>
+        <run>
+            <include name="Purchase"/>
+        </run>
+    </groups>
+
+    <test name="Submit Order Test">
+        <classes>
+            <class name="org.example.SubmitOrderTest"/>
+        </classes>
+    </test>
+    <test name="Error Validation Test">
+        <classes>
+            <class name="org.example.ErrorValidationsTest"/>
+        </classes>
+    </test>
+
+</suite>
