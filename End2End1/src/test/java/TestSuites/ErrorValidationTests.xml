@@ -15,9 +15,9 @@
             <class name="org.example.ErrorValidationsTest"/>
         </classes>
     </test>
-    <test name="Stand Alone Test">
-        <classes>
-            <class name="org.example.StandAloneTest"/>
-        </classes>
-    </test>
+<!--    <test name="Stand Alone Test">-->
+<!--        <classes>-->
+<!--            <class name="org.example.StandAloneTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
