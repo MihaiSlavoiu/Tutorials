@@ -14,7 +14,7 @@ public class ExtentReport {
     @BeforeTest
     public void config() {
         //ExtentReports  , ExtentSparkReporter
-        String path = System.getProperty("use.dir") + "index.html";
+        String path = System.getProperty("use.dir") + "index.html"; //creezi un index.html unde o sa fie raportul
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(path);
         extentSparkReporter.config().setReportName("Web Automation Results");//titlul care apare in dreapta sus
         extentSparkReporter.config().setDocumentTitle("Test Results");//titlul paginii
