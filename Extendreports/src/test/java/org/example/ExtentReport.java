@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ExtentReport {
+    //bagi extentreport in maven
     ExtentReports extentReport;//o declari global sa o poti folosi in metode
 
     @BeforeTest
