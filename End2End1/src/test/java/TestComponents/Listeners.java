@@ -13,6 +13,7 @@ import org.testng.ITestResult;
 import java.io.IOException;
 
 public class Listeners extends BaseTests implements ITestListener {
+    //ITlistener asculta rezultatele testelor
     //trebuie sa faci in testng.xml lister ca sa stie de unde sa il ia
     ExtentTest test;
     ExtentReports extentReports = ExtentReporterNG.getReportObject();

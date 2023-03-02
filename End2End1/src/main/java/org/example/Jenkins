@@ -1,0 +1,1 @@
+mvn test -PRegression - pentru a testa toate testele din Regression ID
