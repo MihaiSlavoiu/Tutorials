@@ -12,8 +12,6 @@ public class Udemy18AutomatingWindowControls {
        // driver.get("https://the-internet.herokuapp.com/");
         driver.get("https://admin:admin@the-internet.herokuapp.com/");
         driver.findElement(By.linkText("Basic Auth")).click();
-
-
     }
 
 

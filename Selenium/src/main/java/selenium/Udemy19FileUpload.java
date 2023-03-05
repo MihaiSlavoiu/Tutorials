@@ -60,7 +60,5 @@ public class Udemy19FileUpload {
         }else{
             System.out.println("nuuuu");
         }
-
-
     }
 }
