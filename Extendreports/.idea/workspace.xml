@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ef9f5df-c07f-40b6-9418-ce4b587f1dd8" name="Changes" comment="Add">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ExtentReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ExtentReport.java" afterDir="false" />
-    </list>
+    <list default="true" id="1ef9f5df-c07f-40b6-9418-ce4b587f1dd8" name="Changes" comment="Add" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +33,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/iahim/Tutorials/End2End1"
+    "last_opened_file_path": "C:/Users/iahim/Tutorials/Mihai"
   }
 }]]></component>
   <component name="RunAnythingCache">

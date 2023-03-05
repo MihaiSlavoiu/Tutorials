@@ -58,7 +58,7 @@ public class Udemy19FileUpload {
         if(f.exists()){
             System.out.println("File found");
         }else{
-            System.out.println("nuuuu");
+            System.out.println("File not found");
         }
     }
 }
