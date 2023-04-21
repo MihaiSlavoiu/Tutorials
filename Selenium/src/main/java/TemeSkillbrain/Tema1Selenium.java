@@ -95,7 +95,7 @@ public class Tema1Selenium {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver1 = new ChromeDriver(options);
         driver1.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver1,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(5));
         driver1.get("https://demoqa.com/elements");
         driver1.findElement(By.xpath("//div[@class='element-list collapse show']//li[@id='item-0']")).click();
 
@@ -125,7 +125,7 @@ public class Tema1Selenium {
         //Locator for "Home" Checkbox:
 
         driver1.findElement(By.xpath("//span[text()='Home']//preceding-sibling::div[@class='rct-checkbox']//input"));
-       // By.cssSelector("input[type='checkbox'][value='home']");
+        // By.cssSelector("input[type='checkbox'][value='home']");
 
         //Locator for "Desktop" Checkbox:
         driver1.findElement(By.xpath("//span[text()='Desktop']//preceding-sibling::div[@class='rct-checkbox']//input"));
@@ -145,7 +145,7 @@ public class Tema1Selenium {
 
         driver1.findElement(By.xpath("//div[@class='element-list collapse show']//li[@id='item-2']")).click();
 
-       // Locator for "Yes" Radio Button:
+        // Locator for "Yes" Radio Button:
         driver1.findElement(By.xpath("//label[text()='Yes']//preceding-sibling::input[@type='radio']"));
         //By.cssSelector("input[type='radio'][value='yes']");
 
