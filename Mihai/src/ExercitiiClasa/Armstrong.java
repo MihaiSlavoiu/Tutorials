@@ -28,19 +28,15 @@ public class Armstrong {
             elements[i] = rest;
             temp = temp / 10;
         }
-
         for (long element : elements) {
             sum = (int) (sum + pow(element, riseOfPowef(number)));
         }
-
         if (number == sum) {
             System.out.println("este numar Armstrong: " + number);
-
         }
         else {
             System.out.println("nu este numar Armstrong");
         }
-
     }
 
     public static void main(String[] args) {

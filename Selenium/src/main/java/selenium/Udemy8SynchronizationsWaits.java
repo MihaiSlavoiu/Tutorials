@@ -58,12 +58,12 @@ public class Udemy8SynchronizationsWaits {
             public WebElement apply(WebDriver driver1) {
                 if (driver1.findElement(By.cssSelector("div[id='finish'] h4")).isDisplayed()) {
                     return driver1.findElement(By.cssSelector("div[id='finish'] h4"));
-                }else{
+                } else {
                     return null;
                 }
             }
 
-            });
+        });
         System.out.println(driver1.findElement(By.cssSelector("div[id='finish'] h4")).getText());
 
     }

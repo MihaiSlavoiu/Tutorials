@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -35,7 +36,9 @@ public class Udemy4Calendar {
 //        }
 
 
-        WebDriver driver1 = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        ChromeDriver driver1 = new ChromeDriver(options);
         driver1.manage().window().maximize();
         driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver1.get("https://www.path2usa.com/travel-companions");

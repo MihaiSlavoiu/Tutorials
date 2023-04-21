@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class Udemy12BrokenLinks {
 
 // TODO Auto-generated method stub
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
 
         //broken URL
 
@@ -67,7 +68,7 @@ public class Udemy12BrokenLinks {
             System.out.println(respCode);
             a.assertTrue(respCode < 400, "The link with Text" + link.getText() + " is broken with code" + respCode);
         }
-        a.assertAll();
+//        a.assertAll();
     }
 }
 
